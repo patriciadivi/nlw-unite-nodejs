@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "O pass.in é uma aplicação de **gestão de participantes em eventos presenciais**.",
   "main": "index.js",
+  "engines": {
+    "node": "20"
+  },
   "scripts": {
-    "start": "node dist/server.mjs",
+    "start": "node dist/server.js",
     "build": "tsup src --format esm",
     "dev": "tsx watch --env-file .env src/server.ts",
     "vercel-build": "prisma generate && npx prisma db seed && prisma migrate deploy && next build && tsup src --format esm",
