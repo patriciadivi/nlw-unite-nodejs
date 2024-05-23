@@ -3,14 +3,14 @@
   "builds": [
     {
       "src": "./dist/sever.js",
-      "use": "@vercel/node"
+      "use": "@now/node"
     }
   ],
 
   "routes": [
     {
         "src": "/(.*)",
-        "dest": "src/sever.js",
+        "dest": "/dist/sever.js",
         "methods": [
             "GET",
             "POST",
